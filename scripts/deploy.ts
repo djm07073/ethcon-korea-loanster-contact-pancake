@@ -7,6 +7,7 @@ import { IPancakeV3Toaster } from "../typechain-types/contracts/toaster/PancakeV
 async function deployMenu() {
   const menu_f = await ethers.getContractFactory("PancakeV3Menu");
   const menu = await menu_f.deploy().then((tx) => tx.waitForDeployment());
+
   return await menu.getAddress();
 }
 async function deployToaster(
@@ -168,12 +169,13 @@ async function test() {
 
 async function main() {
   const menu = await deployMenu();
+  console.log("menu: ", menu);
   await deployToaster(
     CONFIGS.linea.pancakeswapV3.meta.PancakeV3PoolDeployer,
     CONFIGS.linea.pancakeswapV3.meta.PancakeV3Factory,
     CONFIGS.linea.pancakeswapV3.meta.NonfungiblePositionManager,
     CONFIGS.linea.pancakeswapV3.wETH,
-    CONFIGS.linea.uniswapV3.meta.menu
+    menu
   ).then(async (t) => {
     console.log("toaster: ", t);
     const toaster = await ethers.getContractAt("PancakeV3Toaster", t);
@@ -188,5 +190,5 @@ async function menu() {
   const menu = await toaster.menu();
   console.log(menu);
 }
-// main();
-menu();
+main();
+// menu();

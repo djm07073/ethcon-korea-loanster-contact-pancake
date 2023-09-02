@@ -63,7 +63,18 @@ const DEFAULT_COMPILER_SETTINGS = {
 };
 export default {
   networks: {
-    hardhat: {},
+    hardhat: {
+      forking: {
+        url: "https://zkevm-rpc.com",
+        blockNumber: 5070988,
+      },
+    },
+    // hardhat: {
+    //   forking: {
+    //     url: "https://linea.drpc.org",
+    //     blockNumber: 331420,
+    //   }, // linea
+    // },
     // hardhat: {
     //   forking: {
     //     url: "https://rpc.ankr.com/eth",
