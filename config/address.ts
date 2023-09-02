@@ -511,7 +511,7 @@ export const CONFIGS = {
       feeTiers: [100, 500, 2500, 10000],
 
       factory: "0x1BB72E0CbbEA93c08f535fc7856E0338D7F7a8aB",
-      wETH: "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+      wETH: "0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9",
       meta: {
         MasterChefV3: "0x22E2f236065B780FA33EC8C4E58b99ebc8B55c57",
         SmartRouter: "0x678Aa4bF4E210cf2166753e054d5b7c31cc7fa86",

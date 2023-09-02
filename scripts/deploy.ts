@@ -171,10 +171,10 @@ async function main() {
   const menu = await deployMenu();
   console.log("menu: ", menu);
   await deployToaster(
-    CONFIGS.linea.pancakeswapV3.meta.PancakeV3PoolDeployer,
-    CONFIGS.linea.pancakeswapV3.meta.PancakeV3Factory,
-    CONFIGS.linea.pancakeswapV3.meta.NonfungiblePositionManager,
-    CONFIGS.linea.pancakeswapV3.wETH,
+    CONFIGS.polygonzkEVM.pancakeswapV3.meta.PancakeV3PoolDeployer,
+    CONFIGS.polygonzkEVM.pancakeswapV3.meta.PancakeV3Factory,
+    CONFIGS.polygonzkEVM.pancakeswapV3.meta.NonfungiblePositionManager,
+    CONFIGS.polygonzkEVM.pancakeswapV3.wETH,
     menu
   ).then(async (t) => {
     console.log("toaster: ", t);

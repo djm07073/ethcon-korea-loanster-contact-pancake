@@ -101,7 +101,6 @@ export default {
       chainId: 1,
       url: "https://eth.llamarpc.com",
       accounts: [DEPLOY],
-      gasPrice: 16 * 10 ** 9,
     },
     bsc: {
       chainId: 56,
@@ -117,31 +116,26 @@ export default {
       chainId: 5,
       url: "https://rpc.ankr.com/eth_goerli",
       accounts: [DEPLOY],
-      gasPrice: 1.5 * 10 ** 9,
     },
     matic: {
       chainId: 137,
       url: "https://polygon.llamarpc.com",
       accounts: [DEPLOY],
-      gasPrice: 80 * 10 ** 9,
     },
     mumbai: {
       chainId: 80001,
       url: "https://polygon-mumbai-bor.publicnode.com",
       accounts: [DEPLOY],
-      gasPrice: 300 * 10 ** 9,
     },
     tbsc: {
       chainId: 97,
       url: "https://data-seed-prebsc-1-s2.binance.org:8545",
       accounts: [DEPLOY],
-      gasPrice: 7 * 10 ** 9,
     },
     chiado: {
       chainId: 10200,
       url: "https://rpc.chiadochain.net",
       accounts: [DEPLOY],
-      gasPrice: 1000000000,
     },
     sepolia: {
       chainId: 11155111,
@@ -167,6 +161,11 @@ export default {
     linea: {
       chainId: 59144,
       url: "https://linea.drpc.org",
+      accounts: [DEPLOY],
+    },
+    polygonzkEVM: {
+      chainId: 1101,
+      url: "https://polygon-zkevm.drpc.org",
       accounts: [DEPLOY],
     },
   },
